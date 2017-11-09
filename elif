@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ $1 = "witaj" ]; then
+	echo 'Pierwszy parametr miał wartość "witaj"'
+elif [ $2 = "papa" ]; then
+	echo 'Drugi parametr miał wartość "papa"'
+else
+	echo -n 'Pierwszy parametr nie iał wartości "witaj", a drugi wartości "papa" -- '
+	echo Miały one wartości '"'$1'"' i '"'$2'"'
+fi

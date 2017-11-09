@@ -1,0 +1,6 @@
+#!/bin/sh
+if grep -q deamon /etc/passwd; then
+	echo W pliku passwd jest wzmianka o użytkowniku deamon.
+else
+	echo Nie ma problemu. W pliku passwd nie wpisano użytkownika deamon.
+fi

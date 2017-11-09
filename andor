@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ "$1" = witaj ] || [ "$1" = papa ]; then
+	echo 'W pierwszym parametrze znaleziono słowo "'$1'"'
+fi

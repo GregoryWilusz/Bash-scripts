@@ -1,0 +1,9 @@
+#!/bin/sh
+for nazwapliku in *; do
+	if [ -f $nazwapliku ]; then
+		ls -l $nazwapliku
+		file $nazwapliku
+	else
+		echo $nazwapliku nie jest zwykłym plikiem.
+	fi
+done

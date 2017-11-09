@@ -1,0 +1,3 @@
+#!/bin/sh
+echo pierwszy parametr: $1
+echo trzeci parametr: $3

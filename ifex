@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ x"$1" = x"witaj" ]; then
+	echo 'W pierwszym parametrze było słowo "witaj"'
+else 
+	echo -n 'W pierwszym parametrze nie było słow "witaj" --'
+	echo ale było słowo '"'$1'"'
+fi
