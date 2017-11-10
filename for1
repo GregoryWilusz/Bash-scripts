@@ -1,0 +1,4 @@
+#!/bin/sh
+for str in jeden dwa trzy cztery pięć 6 7 8 9 10; do
+	echo $str
+done

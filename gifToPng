@@ -1,0 +1,14 @@
+#!/bin/sh
+for plik in *.gif; do
+	
+	#Jeżeli nie ma żadnych plików - koniec
+	if [ ! -f $plik ]; then
+		echo Brak plików .gif do konwersji.
+		exit
+	fi
+
+	b=`basename $plik .gif`
+	echo Konwersja pliku $b.gif na plik $b.png...
+	giftopnm $b.gif | pnmtopng > $b.png
+
+done

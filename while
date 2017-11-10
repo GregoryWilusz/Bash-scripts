@@ -1,0 +1,13 @@
+#!/bin/sh
+PLIK=/tmp/whiletest.$$;
+echo pierwszywiersz > $PLIK
+i="1"
+
+while tail -10 $PLIK | grep -q pierwszywiersz; do
+	echo -n Liczba linii w $PLIK: ' '
+	wc -l $PLIK | awk '{print $1}'
+	echo $i. newline >> $PLIK
+	i=$[$i+1]
+done
+
+rm -f $PLIK

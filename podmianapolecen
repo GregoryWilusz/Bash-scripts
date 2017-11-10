@@ -1,0 +1,16 @@
+#!/bin/sh
+ZNACZNIKI=`grep ^flags /proc/cpuinfo | sed 's/.*://' | head -1`
+echo Procesor w tym komputerze wyposażony jest w:
+for f in $ZNACZNIKI; do
+	case $f in
+		fpu)	MSG="jednostkę zmiennoprzecinkową"
+				;;
+		3dnow)	MSG="rozszerzenia graficzne 3DNOW"
+				;;
+		mtrr)	MSG="rejestr zakresu typów pamięci"
+				;;
+		*)		MSG="nieznaną technologię"
+				;;
+	esac
+	echo $f: $MSG
+done

@@ -1,0 +1,15 @@
+#!/bin/sh
+case $1 in
+	pa)
+		echo Dobra, pa pa.
+		;;
+	cześć|czołem)
+		echo Miło Cię widzieć.
+		;;
+	co*)
+		echo Cokolwiek powiesz.
+		;;
+	*)
+		echo 'Hę?''
+		;;
+esac

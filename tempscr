@@ -1,0 +1,10 @@
+#!/bin/sh
+PLIKTMP1=`mktemp /tmp/im1.XXXXXX`
+PLIKTMP2=`mktemp /tmp/im2.XXXXXX`
+trap “rm -f $PLIKTMP1 $PLIKTMP2; exit 1” INT
+
+cat /proc/interrupts > $PLIKTMP1
+sleep 2
+cat /proc/interrupts > $PLIKTMP2
+diff $PLIKTMP1 $PLIKTMP2
+rm -f $PLIKTMP1 $PLIKTMP2
